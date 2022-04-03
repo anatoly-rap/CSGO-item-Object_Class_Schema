@@ -15,10 +15,10 @@ class itemType(object):
  
 class itemVers(object): 
     
-    def __init__(self, typeVarient_dict):
+    def __init__(self, typeVariant_dict):
         
-        for key in typeVarient_dict:
-            setattr(self, key, typeVarient_dict[key])
+        for key in typeVariant_dict:
+            setattr(self, key, typeVariant_dict[key])
             
 def typeToDict(args):
     
@@ -44,11 +44,14 @@ if __name__ == "__main__":
     #Initial(super) dictionary 
      itemType_dict = {"knife":'CSGO_Knives.csv',"rifle": 'rifles_CSGO.csv'}     
      
-     
 type  = itemType(itemType_dict)
-typeVarient_dict = typeToDict(type.knife) 
-version = itemVers(typeVarient_dict)
+typeVariant_dict = typeToDict(type.knife) 
+version = itemVers(typeVariant_dict)
 print(version.Karambit) #test
+
+
+
+
 
 
 
